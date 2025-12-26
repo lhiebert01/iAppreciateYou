@@ -238,11 +238,19 @@ function updateFavoritesList() {
     }
     
     listElement.innerHTML = favorites.map((fav, index) => `
-        <div class="favorite-item">
+        <div class="favorite-item" data-index="${index}">
             <span class="favorite-text">${fav.text}</span>
-            <button class="remove-favorite-btn" onclick="removeFavorite(${index})" aria-label="Remove favorite">✕</button>
+            <button class="remove-favorite-btn" data-index="${index}" aria-label="Remove favorite">✕</button>
         </div>
     `).join('');
+    
+    // Add event delegation for remove buttons
+    listElement.querySelectorAll('.remove-favorite-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index);
+            removeFavorite(index);
+        });
+    });
 }
 
 // Remove favorite
@@ -274,14 +282,38 @@ function shareAffirmation() {
 
 // Copy to clipboard
 function copyToClipboard(text) {
+    // Use modern Clipboard API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            showCopyFeedback();
+        }).catch(() => {
+            // Fallback for older browsers
+            fallbackCopyToClipboard(text);
+        });
+    } else {
+        fallbackCopyToClipboard(text);
+    }
+}
+
+// Fallback copy method for older browsers
+function fallbackCopyToClipboard(text) {
     const textarea = document.createElement('textarea');
     textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
     document.body.appendChild(textarea);
     textarea.select();
-    document.execCommand('copy');
+    try {
+        document.execCommand('copy');
+        showCopyFeedback();
+    } catch (err) {
+        console.error('Failed to copy text:', err);
+    }
     document.body.removeChild(textarea);
-    
-    // Show feedback
+}
+
+// Show copy feedback
+function showCopyFeedback() {
     const btn = document.getElementById('share-btn');
     const originalText = btn.textContent;
     btn.textContent = '✓ Copied!';

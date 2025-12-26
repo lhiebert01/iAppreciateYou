@@ -163,20 +163,43 @@ header {
 }
 
 .subtitle {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.9);
-    font-weight: 400;
-    margin-top: 0.25rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+    border-radius: 30px;
+    border: 2px solid rgba(255,255,255,0.4);
+    display: inline-block;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+    animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        border-color: rgba(255,255,255,0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(255,255,255,0.3);
+        border-color: rgba(255,255,255,0.6);
+    }
 }
 
 .dedication {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--white);
     font-style: italic;
     font-weight: 600;
-    margin-top: 0.5rem;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.2);
-    opacity: 0.95;
+    margin-top: 0.75rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
 }
 
 /* Main Card */

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iAppreciateYou - Your Daily Affirmation Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+    
+    <div class="container">
+        <header>
+            <h1 class="title">✨ iAppreciateYou ✨</h1>
+            <p class="subtitle">Your daily dose of positivity and self-love</p>
+        </header>
+
+        <main>
+            <div class="affirmation-card">
+                <div class="card-header">
+                    <span class="category-badge" id="category-badge">All</span>
+                    <button class="favorite-btn" id="favorite-btn" aria-label="Add to favorites">
+                        <span class="heart">♡</span>
+                    </button>
+                </div>
+                
+                <div class="affirmation-content">
+                    <p class="affirmation-text" id="affirmation-text">
+                        Click the button below to receive your affirmation!
+                    </p>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-primary" id="new-affirmation-btn">
+                        <span class="btn-icon">🌟</span>
+                        New Affirmation
+                    </button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="confidence">Confidence</button>
+                    <button class="filter-btn" data-category="gratitude">Gratitude</button>
+                    <button class="filter-btn" data-category="strength">Strength</button>
+                    <button class="filter-btn" data-category="love">Self-Love</button>
+                    <button class="filter-btn" data-category="success">Success</button>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number" id="daily-count">0</div>
+                    <div class="stat-label">Today's Affirmations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="favorite-count">0</div>
+                    <div class="stat-label">Favorites</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="streak-count">1</div>
+                    <div class="stat-label">Day Streak</div>
+                </div>
+            </div>
+
+            <div class="favorites-section" id="favorites-section">
+                <h2>💝 Your Favorite Affirmations</h2>
+                <div class="favorites-list" id="favorites-list">
+                    <p class="empty-state">You haven't saved any favorites yet. Click the heart to save affirmations you love!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with 💖 for your wellbeing</p>
+            <button class="btn btn-secondary" id="share-btn">Share the Love</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

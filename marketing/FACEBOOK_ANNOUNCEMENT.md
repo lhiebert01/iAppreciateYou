@@ -17,7 +17,7 @@ I'm excited to share a new app designed to help you develop, build, and share yo
 - Save your favorites & track your daily streak
 - Beautiful, joyful experience - works on any device
 
-**Try it FREE now:** https://lhiebert01.github.io/iAppreciateYou/
+**Try it FREE now:** https://affirm.neoaesop.com
 
 Develop your inner winner. Grow other winners too.
 
@@ -35,7 +35,7 @@ Introducing iAppreciateYou - 400+ Super-Affirmations for the Intelligence Era
 
 Your superpower is YOU. Develop your inner winner. Grow other winners too.
 
-FREE: https://lhiebert01.github.io/iAppreciateYou/
+FREE: https://affirm.neoaesop.com
 
 Part of @NeoAesop "AI for Good" Initiative
 
@@ -57,7 +57,7 @@ In the Intelligence Era, building character is just as important as building ski
 
 "To love others, you must first love yourself and treat yourself as your best friend."
 
-Try it now: https://lhiebert01.github.io/iAppreciateYou/
+Try it now: https://affirm.neoaesop.com
 
 This is part of the NeoAesop "AI for Good" Initiative - using AI to build character, not just content.
 

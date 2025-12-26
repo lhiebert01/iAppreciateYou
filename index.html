@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iAppreciateYou - Daily Affirmations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="hero-image">
+                <img src="assets/iAppreciateYou-Hero.png" alt="iAppreciateYou Hero" />
+            </div>
+            <h1 class="title">iAppreciateYou</h1>
+            <p class="subtitle">400+ affirmations for your winning mindset</p>
+            <p class="dedication">"Your superpower is YOU. Love yourself first."</p>
+        </header>
+
+        <main>
+            <div class="affirmation-card">
+                <div class="card-header">
+                    <span class="category-badge" id="category-badge">Ready</span>
+                    <div class="favorite-wrapper">
+                        <button class="favorite-btn" id="favorite-btn" aria-label="Add to favorites">
+                            <span class="heart">&#9829;</span>
+                        </button>
+                        <span class="favorite-hint">Click to save</span>
+                        <span class="favorite-toast" id="favorite-toast">Affirmation Saved!</span>
+                    </div>
+                </div>
+
+                <p class="affirmation-text" id="affirmation-text">
+                    Tap the button below to begin your journey
+                </p>
+
+                <div class="details-section" id="details-section">
+                    <button class="details-toggle" id="details-toggle">
+                        <span class="toggle-icon">&#9660;</span> Learn More
+                    </button>
+                    <div class="details-content" id="details-content">
+                        <p class="details-meaning" id="details-meaning"></p>
+                        <p class="details-reinforcement" id="details-reinforcement"></p>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="new-affirmation-btn">
+                    New Affirmation
+                </button>
+            </div>
+
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="winner">Winner</button>
+                <button class="filter-btn" data-category="confidence">Confidence</button>
+                <button class="filter-btn" data-category="gratitude">Gratitude</button>
+                <button class="filter-btn" data-category="strength">Strength</button>
+                <button class="filter-btn" data-category="selflove">Self-Love</button>
+                <button class="filter-btn" data-category="success">Success</button>
+                <button class="filter-btn" data-category="mindset">Mindset</button>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <span class="stat-num" id="daily-count">0</span>
+                    <span class="stat-label">Today</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" id="favorite-count">0</span>
+                    <span class="stat-label">Favorites</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" id="streak-count">1</span>
+                    <span class="stat-label">Streak</span>
+                </div>
+            </div>
+
+            <div class="favorites-section" id="favorites-section">
+                <h3>Your Favorites</h3>
+                <div class="search-wrapper">
+                    <input type="text" id="favorites-search" class="favorites-search" placeholder="Search your favorites..." />
+                </div>
+                <div class="favorites-list" id="favorites-list">
+                    <p class="empty-state">Click the heart to save favorites</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p class="share-cta">Love this app? Share the love!</p>
+            <button class="btn btn-share" id="share-btn">Share With a Friend</button>
+            <p class="footer-text">Made with love for your wellbeing</p>
+            <div class="attribution">
+                <p>Love building character strengths? Check out</p>
+                <a href="https://neoaesop.com/" target="_blank" rel="noopener" class="neoaesop-link">
+                    NeoAesop.com
+                </a>
+                <p class="attribution-tagline">"AI for Good" - Building Character, Not Just Content</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

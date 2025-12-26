@@ -1149,6 +1149,17 @@ function setupEventListeners() {
     document.getElementById('details-toggle').addEventListener('click', toggleDetails);
     document.getElementById('favorites-search').addEventListener('input', filterFavorites);
 
+    // About modal
+    const aboutBtn = document.getElementById('about-btn');
+    const aboutModal = document.getElementById('about-modal');
+    const aboutClose = document.getElementById('about-close');
+
+    aboutBtn.addEventListener('click', () => aboutModal.classList.add('active'));
+    aboutClose.addEventListener('click', () => aboutModal.classList.remove('active'));
+    aboutModal.addEventListener('click', (e) => {
+        if (e.target === aboutModal) aboutModal.classList.remove('active');
+    });
+
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));

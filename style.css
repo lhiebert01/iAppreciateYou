@@ -32,13 +32,13 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150vw;
-    height: 150vw;
+    width: 75vw;
+    height: 75vw;
     background-image: url('assets/iAppreciateYou-Hero.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.08;
+    opacity: 0.18;
     pointer-events: none;
     z-index: 0;
 }
@@ -82,8 +82,8 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 360px;
-    height: 360px;
+    width: 450px;
+    height: 450px;
     background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
     border-radius: 50%;
     z-index: 0;
@@ -93,7 +93,7 @@ header {
 .hero-image img {
     position: relative;
     z-index: 1;
-    max-width: 320px;
+    max-width: 400px;
     height: auto;
     border-radius: 20px;
     box-shadow:
@@ -784,12 +784,12 @@ footer {
     }
 
     .hero-image img {
-        max-width: 200px;
+        max-width: 250px;
     }
 
     .hero-image::before {
-        width: 240px;
-        height: 240px;
+        width: 300px;
+        height: 300px;
     }
 
     .title {
